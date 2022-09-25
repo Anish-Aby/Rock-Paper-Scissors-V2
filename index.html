@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="heading">
+            Rock, Paper, Scissors
+        </div>
+    </header>
+
+    <!-- <div class="spacer spacer-1"></div> -->
+
+    <div class="choice-container">
+        <div class="result-header">
+            Result:
+        </div>
+        <div class="choose-header">
+            Choose your option:
+        </div>
+
+        <div class="image-containers">
+            <div class="computer-choice-container">
+                <div class="computer-img">
+                    <img src="/images/rock_flip.png" width="200">
+                </div>
+            </div>
+            <div class="user-choice-container">
+                <div class="user-img">
+                    <img src="/images/rock_without_bg.png" width="200">
+                </div>
+            </div>
+            <img class="choice" id="rock" src="/images/rock_without_bg.png" width="200">
+            <img class="choice" id="paper" src="/images/paper_without_bg.png" width="200"> 
+            <img class="choice" id="scissors" src="/images/scissors_without_bg.png" width="200"> 
+        </div>
+        <div class="result-display">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>      
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".choice-container"), {
+		max: 15,
+		speed: 400
+	});
+</script>
+</body>
+
+</html>
+
+
+<!-- 
+    https://media0.giphy.com/media/jqI3buvbN3EitBjHfB/giphy.gif?cid=6c09b9524w7wrf6dfxxjs9qpdii29fz0iuj2fd34wij8znv5&rid=giphy.gif&ct=s" width="500" height="500"
+ -->
