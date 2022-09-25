@@ -1,3 +1,20 @@
+
+let menuClick = document.querySelector(".ticon");
+let menu =document.querySelector(".menu");
+let closeClick = document.querySelector(".close-icon");
+
+menuClick.addEventListener("click", () => {
+    menu.style.right = "0";
+    closeClick.addEventListener("click", () => {
+        menu.style.right = "-100%"
+    })
+})
+
+
+
+
+
+
 let userChoice;
 
 let possibleChoices = document.querySelectorAll(".choice");
@@ -8,7 +25,7 @@ possibleChoices.forEach( possibleChoice => possibleChoice.addEventListener("clic
 
     hideFirstElements();
     showSecondElements();
-    setInterval(generateComputerResult(userChoice), 1000)
+    generateComputerResult(userChoice);
 }))
 
 function hideFirstElements(){
@@ -38,59 +55,63 @@ function showSecondElements(){
 }
 
 function generateComputerResult(userChoice){
-    let random = Math.floor (Math.random() * 3) + 1;
-    let resultDisplay = document.querySelector(".result-display");
+    setTimeout(function() {
+        let random = Math.floor (Math.random() * 3) + 1;
+        let resultDisplay = document.querySelector(".result-display");
+        let tryAgain = document.getElementById("try-again-link");
 
-    let computerRandChoice;
-    if (random == 1){
-        computerRandChoice = "rock";
-    }
-    else if (random == 2){
-        computerRandChoice = "paper";
-    }
-    else if (random == 3){
-        computerRandChoice = "scissors";
-    }
+        let computerRandChoice;
+        if (random == 1){
+            computerRandChoice = "rock";
+        }
+        else if (random == 2){
+            computerRandChoice = "paper";
+        }
+        else if (random == 3){
+            computerRandChoice = "scissors";
+        }
 
-    if (computerRandChoice == userChoice){
-        resultDisplay.innerHTML = "Draw!";
-    }
-    else if (computerRandChoice == "rock" && userChoice == "scissors"){
-        resultDisplay.innerHTML = "You Lost!";
-    }
-    else if (computerRandChoice == "paper" && userChoice == "rock"){
-        resultDisplay.innerHTML = "You Lost!";
-    }
-    else if (computerRandChoice == "scissors" && userChoice == "paper"){
-        resultDisplay.innerHTML = "You Lost!";
-    }
-    else{
-        resultDisplay.innerHTML = "You Won!";
-    }
+        if (computerRandChoice == userChoice){
+            resultDisplay.innerHTML = "Draw!";
+        }
+        else if (computerRandChoice == "rock" && userChoice == "scissors"){
+            resultDisplay.innerHTML = "You Lost!";
+        }
+        else if (computerRandChoice == "paper" && userChoice == "rock"){
+            resultDisplay.innerHTML = "You Lost!";
+        }
+        else if (computerRandChoice == "scissors" && userChoice == "paper"){
+            resultDisplay.innerHTML = "You Lost!";
+        }
+        else{
+            resultDisplay.innerHTML = "You Won!";
+        }
+        resultDisplay.style.display= "flex";
+            // Replacing the user choice img
+            let userImg = document.getElementById("user-imgid");
+            if(userChoice === "rock"){
+                userImg.src = "/images/rock_without_bg.png";
+            }
+            else if(userChoice === "paper"){
+                userImg.src = "/images/paper_without_bg.png";
+            }
+            else if(userChoice === "scissors"){
+                userImg.src = "/images/scissors_without_bg.png";
+            }
+    
+        // Replacing the computer choice img
+        let computerImg = document.getElementById("computer-imgid");
+        if(computerRandChoice === "rock"){
+            computerImg.src = "/images/rock_flip.png";
+        }
+        else if(computerRandChoice === "paper"){
+            computerImg.src = "/images/paper_flip.png";
+        }
+        else if(computerRandChoice === "scissors"){
+            computerImg.src = "/images/scissors_flip.png";
+        }
 
-    // Replacing the user choice img
-    let userImg = document.querySelector(".user-img");
-    if(userChoice == "rock"){
-        userImg.src = "/images/rock_without_bg.png";
-    }
-    else if(userChoice == "paper"){
-        userImg.src = "/images/paper_without_bg.png";
-    }
-    else if(userChoice == "scissors"){
-        userImg.src = "/images/scissors_without_bg.png";
-    }
-
-    // Replacing the computer choice img
-    let computerImg = document.querySelector(".computer-img");
-    if(computerRandChoice == "rock"){
-        computerImg.src = "/images/rock_flip.png";
-    }
-    else if(computerRandChoice == "paper"){
-        computerImg.src = "/images/paper_flip.png";
-    }
-    else if(computerRandChoice == "scissors"){
-        computerImg.src = "/images/scissors_flip.png";
-    }
-
-    resultDisplay.style.display= "flex";
+        tryAgain.style.display = "flex";
+    }, 1000);
 }
+

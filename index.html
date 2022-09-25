@@ -14,11 +14,44 @@
 </head>
 
 <body>
+    <span class="ticon">&#9776;</span>
+    <div class="menu">
+        <span class="close-icon">&times;</span>
+        <h2 class="menu-header2">Rock, Paper, Scissors</h2>
+        <ul>
+            <li>
+                <a href="#" onclick="window.location.reload(true);">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Anish-Aby" target="_blank">
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/imanishaby/" target="_blank">
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://in.linkedin.com/in/anish-aby-2b795021a" target="_blank">
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
     <header class="header-container">
         <div class="heading">
             Rock, Paper, Scissors
         </div>
     </header>
+    <div class="description">
+        This is a small project that I have worked on. 
+                    You can choose any one of the options below!
+    </div>
 
     <!-- <div class="spacer spacer-1"></div> -->
 
@@ -32,13 +65,13 @@
 
         <div class="image-containers">
             <div class="computer-choice-container">
-                <div class="computer-img">
-                    <img src="/images/rock_flip.png" width="200">
+                <div class="computer-img" >
+                    <img id="computer-imgid" src="/images/rock_flip.png" width="200">
                 </div>
             </div>
             <div class="user-choice-container">
-                <div class="user-img">
-                    <img src="/images/rock_without_bg.png" width="200">
+                <div class="user-img" >
+                    <img id="user-imgid" src="/images/rock_without_bg.png" width="200">
                 </div>
             </div>
             <img class="choice" id="rock" src="/images/rock_without_bg.png" width="200">
@@ -47,6 +80,9 @@
         </div>
         <div class="result-display">
             
+        </div>
+        <div class="try-again">
+            <a id="try-again-link" href="#" onclick="window.location.reload(true);">Try Again</a>
         </div>
     </div>
 
