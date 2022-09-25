@@ -13,6 +13,51 @@ body{
     background-color: rgb(15, 15, 15);
 }
 
+.full-container{
+    display: flex;
+    flex-direction: column;
+    opacity: 10%;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    
+    top: 0;
+    z-index: -3;
+}
+
+.rockBgText{
+    position: fixed;
+    top: 0;
+    left: -30%;
+    font-size: 10rem;
+    font-family: "Montserrat";
+    -webkit-text-fill-color: rgb(15, 15, 15); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #ebebeb;
+}
+
+.paperBgText{
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    font-size: 10rem;
+    font-family: "Montserrat";
+    -webkit-text-fill-color: rgb(15, 15, 15); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #ebebeb;
+}
+
+.scissorsBgText{
+    position: fixed;
+    top: 39%;
+    left: 50%;
+    font-size: 10rem;
+    font-family: "Montserrat";
+    -webkit-text-fill-color: rgb(15, 15, 15); 
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #ebebeb;
+}
+
 .ticon{
     position: fixed;
     top: 0;
@@ -155,6 +200,38 @@ body{
         font-family: "Montserrat";
         font-size: 2rem;
         color: #ebebeb;
+    }
+    .rockBgText{
+        position: fixed;
+        top: -25%;
+        left: -30%;
+        font-size: 30rem;
+        font-family: "Montserrat";
+        -webkit-text-fill-color: rgb(15, 15, 15); /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: #ebebeb;
+    }
+    
+    .paperBgText{
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        font-size: 30rem;
+        font-family: "Montserrat";
+        -webkit-text-fill-color: rgb(15, 15, 15); /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: #ebebeb;
+    }
+    
+    .scissorsBgText{
+        position: fixed;
+        top: 70%;
+        left: 60%;
+        font-size: 30rem;
+        font-family: "Montserrat";
+        -webkit-text-fill-color: rgb(15, 15, 15); 
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: #ebebeb;
     }
 }
 
