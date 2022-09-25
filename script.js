@@ -90,25 +90,25 @@ function generateComputerResult(userChoice){
             // Replacing the user choice img
             let userImg = document.getElementById("user-imgid");
             if(userChoice === "rock"){
-                userImg.src = "/images/rock_without_bg.png";
+                userImg.src = "/root/images/rock_without_bg.png";
             }
             else if(userChoice === "paper"){
-                userImg.src = "/images/paper_without_bg.png";
+                userImg.src = "/root/images/paper_without_bg.png";
             }
             else if(userChoice === "scissors"){
-                userImg.src = "/images/scissors_without_bg.png";
+                userImg.src = "/root/images/scissors_without_bg.png";
             }
     
         // Replacing the computer choice img
         let computerImg = document.getElementById("computer-imgid");
         if(computerRandChoice === "rock"){
-            computerImg.src = "/images/rock_flip.png";
+            computerImg.src = "/root/images/rock_flip.png";
         }
         else if(computerRandChoice === "paper"){
-            computerImg.src = "/images/paper_flip.png";
+            computerImg.src = "/root/images/paper_flip.png";
         }
         else if(computerRandChoice === "scissors"){
-            computerImg.src = "/images/scissors_flip.png";
+            computerImg.src = "/root/images/scissors_flip.png";
         }
 
         tryAgain.style.display = "flex";
