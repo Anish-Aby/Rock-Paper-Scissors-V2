@@ -14,7 +14,7 @@ body{
 }
 
 .full-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     opacity: 10%;
     position: absolute;
@@ -175,6 +175,9 @@ body{
 }
 
 @media  (min-width: 768px) {
+    .full-container{
+        display: flex;
+    }
     .choice-container{
         min-width: 90vh;
         min-height: 40vh;
